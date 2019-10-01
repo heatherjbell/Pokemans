@@ -1,0 +1,8 @@
+config.py
+__pycache__/
+pgAdmin 4_files/
+.ipynb_checkpoints/
+debug.txt
+Untitled.ipynb
+Untitled1.ipynb
+Webscrape_Notebook.ipynb
