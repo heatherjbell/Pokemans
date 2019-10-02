@@ -1,6 +1,6 @@
 .top-title{
-    color: #0BADA6;  
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ad0b0be5;  
+    font-family: 'Press Start 2P', cursive, 'Times New Roman', Times, serif;
     font-weight: bolder; 
     padding-top: 25px; 
 }
@@ -13,5 +13,11 @@ header{
 
 .logo{
     text-align: center;
-    max-width: 100px;
+    max-width: 70%;
 }
+
+.graph-container {
+    display: grid;
+    justify-content: center;
+  }
+
