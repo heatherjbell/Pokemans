@@ -1,0 +1,17 @@
+.top-title{
+    color: #0BADA6;  
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder; 
+    padding-top: 25px; 
+}
+
+header{
+    text-align: center;
+    max-height: 10px;
+    cursor: pointer;
+  }
+
+.logo{
+    text-align: center;
+    max-width: 100px;
+}
