@@ -16,20 +16,21 @@ Base = automap_base()
 Base.prepare(engine, reflect=True)
 
 # Save reference to the table
-pokemon_data = Base.classes.pokemon
+pokemon_sql = Base.classes.pokemon
 
 # Flask Setup
 app = Flask(__name__)
 
 #Set up MongoDB Database
-app.config['MONGO_URI'] = f'mongodb+srv://{mongo_username}:{mongo_password}@cluster0-wadjd.mongodb.net/test?retryWrites=true&w=majority'
+app.config['MONGO_URI'] = f'mongodb+srv://MikeAnderson89:{mongo_password}@cluster0-wadjd.mongodb.net/test?retryWrites=true&w=majority'
 mongo = PyMongo(app)
 
 
 @app.route("/")
 def index():
     #Return the homepage
-    return render_template("index.html")
+    pokemon_data = mongo.db.pokemon.find_one()
+    return render_template("index.html", pokemon_data = pokemon_data)
     session.close()
 
 
@@ -87,7 +88,7 @@ def stats():
 def scraper():
     import Pokemon_Scrape
     pokemon_db = mongo.db.pokemon
-    pokemon_data = Pokemon_Scrape.scrape()
+    pokemon_data = Pokemon_Scrape.scrape(request.form['pokemon_name'])
     pokemon_db.update({}, pokemon_data, upsert=True)
     return redirect("/", code=302)
 
