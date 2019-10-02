@@ -25,3 +25,5 @@ def scrape():
     #Store it in a dictionary
     pokemon_image = {'URL': pokemon_url}
     browser.quit()
+
+    return pokemon_image

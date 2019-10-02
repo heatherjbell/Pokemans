@@ -31,7 +31,6 @@ def index():
     #Return the homepage
     pokemon_data = mongo.db.pokemon.find_one()
     return render_template("index.html", pokemon_data = pokemon_data)
-    session.close()
 
 
 #All Pokemon Stats
@@ -88,7 +87,7 @@ def stats():
 def scraper():
     import Pokemon_Scrape
     pokemon_db = mongo.db.pokemon
-    pokemon_data = Pokemon_Scrape.scrape(request.form['pokemon_name'])
+    pokemon_data = Pokemon_Scrape.scrape()
     pokemon_db.update({}, pokemon_data, upsert=True)
     return redirect("/", code=302)
 
