@@ -1,4 +1,0 @@
-```{r}
-pokemans = read_csv()
-```
-

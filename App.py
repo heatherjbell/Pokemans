@@ -5,6 +5,7 @@ from sqlalchemy import create_engine, func, inspect
 from flask import Flask, jsonify, render_template, redirect
 from flask_pymongo import PyMongo
 from config import mongo_password, mongo_username
+from bson.json_util import dumps
 
 
 # Database Setup
@@ -42,13 +43,13 @@ def stats():
     for pokeman in stats:
         pokeman = {'Name': pokeman.name,
                     'Number': pokeman.number,
-                    'Type 1': pokeman.type_1,
-                    'Type 2': pokeman.type_2,
+                    'Type_1': pokeman.type_1,
+                    'Type_2': pokeman.type_2,
                     'HP': pokeman.hp,
                     'Attack': pokeman.attack,
                     'Defense': pokeman.defense,
-                    'Special Attack': pokeman.sp_atk,
-                    'Special Defense': pokeman.sp_def,
+                    'Special_Attack': pokeman.sp_atk,
+                    'Special_Defense': pokeman.sp_def,
                     'Speed': pokeman.speed,
                     'Generation': pokeman.generation,
                     'Legendary': pokeman.legendary}
@@ -83,13 +84,15 @@ def stats():
 #    else:
 #        return jsonify("No such Pokemon")
 
-@app.route("/pic/<pokemon>")
-def scraper(pokemon):
-    import Pokemon_Scrape
-    pokemon_db = mongo.db.pokemon
-    pokemon_data = Pokemon_Scrape.scrape(pokemon)
-    pokemon_db.update({}, pokemon_data, upsert=True)
-    return redirect("/", code=302)
+@app.route("/images")
+def images():
+    pokemon_image_db = mongo.db.pokemon.find()
+    images = []
+    for image in pokemon_image_db:
+        image.pop('_id')
+        images.append(image)
+    return jsonify(images)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
