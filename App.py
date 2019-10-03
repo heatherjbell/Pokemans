@@ -37,7 +37,7 @@ def index():
 @app.route("/stats")
 def stats():
     session = Session(engine)
-    stats = session.query(pokemon_data).all()
+    stats = session.query(pokemon_sql).all()
     pokemon_list =[]
     for pokeman in stats:
         pokeman = {'Name': pokeman.name,
@@ -83,11 +83,11 @@ def stats():
 #    else:
 #        return jsonify("No such Pokemon")
 
-@app.route("/scrape")
-def scraper():
+@app.route("/pic/<pokemon>")
+def scraper(pokemon):
     import Pokemon_Scrape
     pokemon_db = mongo.db.pokemon
-    pokemon_data = Pokemon_Scrape.scrape()
+    pokemon_data = Pokemon_Scrape.scrape(pokemon)
     pokemon_db.update({}, pokemon_data, upsert=True)
     return redirect("/", code=302)
 

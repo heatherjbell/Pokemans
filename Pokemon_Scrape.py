@@ -1,4 +1,4 @@
-def scrape():
+def scrape(pokemon):
     import pandas as pd
     from bs4 import BeautifulSoup as bs
     import requests
@@ -6,11 +6,10 @@ def scrape():
     import time
 
     #Latest Headline / Paragraph
-    pokemon = 'Bulbasaur'
     url = f'https://bulbapedia.bulbagarden.net/wiki/{pokemon}_(Pok%C3%A9mon)'
 
     #Open browser
-    browser = Browser('chrome')
+    browser = Browser('chrome', headless=True)
     browser.visit(url)
 
     #Turn webpage into html

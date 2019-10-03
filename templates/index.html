@@ -9,6 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 
 <header>
@@ -20,7 +21,7 @@
             <h1><span><b>My Pokemans: Let Me Show You Them</b></span></h1>
 <!-- SEARCH BOX AND SUBMIT BUTTON -->
             <input id="searchbar" type="search" placeholder="GIMME A POKEMANS..." spellcheck="false" autocorrect="off" autocomplete="off"></input>
-            <button type="submit" href="/scrape" role="button">Search!!</button>
+            <button class="btn" id="searchbutton" type="button" href="/scrape" role="button">Search!!</button>
         </div>
 <!-- Photo box -->
 <div id="photobox" class="Photo">
@@ -46,5 +47,7 @@ Graph 1 Placeholder
 <div id="graphtwo" class"graph-container">
 Graph 2 Placeholder
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="{{ url_for('static', filename='js/scrape.js') }}"></script>
 </body>
