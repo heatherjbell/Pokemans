@@ -38,7 +38,6 @@ d3.select("#searchbutton").on("click", function() {
   d3.json("/images").then(result => {
     result.forEach(pokeguy => {
       if (pokeguy.name == pokemon){
-        console.log(pokeguy.url)
         picture.append("svg")
         .attr('width', 400)
         .attr('height', 400)

@@ -45,8 +45,9 @@ def scrape(pokemon):
 
     return pokemon_image
 
+big_ol_pokemon_list = csv['Name']
 #Run through every pokemon name and get the picture
-for pokedude in csv['Name']:
+for pokedude in big_ol_pokemon_list[170:]:
     try:
         pokemon_db = mongo.db.pokemon
         pokemon_data = scrape(pokedude)
