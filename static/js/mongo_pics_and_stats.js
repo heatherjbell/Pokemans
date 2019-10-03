@@ -27,11 +27,15 @@ d3.select("#searchbutton").on("click", function() {
     result.forEach(pokeguy => {
       if (pokeguy.Name == pokemon){
         stats_panel_heading.append("h2").text(`${pokeguy.Name}`)
-        stats_panel
-          .append("h3").text(`NUMBER: #${pokeguy.Number}`)
-          .append("h3").text(`TYPE: ${pokeguy.Type_1} \/ ${pokeguy.Type_2}`)
-          .append("h3").text(`GENERATION: ${pokeguy.Generation}`)
-          .append("h3").text(`Legendary: ${pokeguy.Legendary}`)
+        stats_panel.append("h3").text(`NUMBER: #${pokeguy.Number}`);
+        stats_panel.append("h3").text(`TYPE: ${pokeguy.Type_1} \/ ${pokeguy.Type_2}`);
+        stats_panel.append("h3").text(`GENERATION: ${pokeguy.Generation}`);
+        if (pokeguy.Legendary == true){
+          stats_panel.append("h3").text("LEGENDARY: YOU'RE GODDAMN RIGHT HE IS")
+        }
+        else{
+          stats_panel.append("h3").text("LEGENDARY: No, he's lame")
+        }
       };
     });
   });
