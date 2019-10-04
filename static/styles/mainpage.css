@@ -1,0 +1,49 @@
+.top-title{
+    color: #ad0b0be5;
+    font-family: 'Press Start 2P', cursive, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    padding-top: 50px;
+}
+
+header{
+    text-align: center;
+    max-height: 10px;
+    cursor: pointer;
+  }
+
+.logo{
+    text-align: center;
+    max-width: 70%;
+}
+
+.graph-container {
+    display: grid;
+    justify-content: center;
+  }
+
+.panel-panel-primary {
+    display: grid;
+    justify-content: center;
+  }
+
+  .panel-heading {
+    display: grid;
+    justify-content: center;
+  }
+
+  .panel-title {
+    display: grid;
+    justify-content: center;
+  }
+
+  #graphone {
+    display: grid;
+    justify-content: left;
+    width: 50%;
+    height: 500px;
+  }
+
+  #graphtwo {
+    display: grid;
+    justify-content: right;
+  }
