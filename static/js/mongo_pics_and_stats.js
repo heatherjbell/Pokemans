@@ -26,6 +26,8 @@ d3.select("#searchbutton").on("click", function() {
   d3.json("/stats").then(result => {
     result.forEach(pokeguy => {
       if (pokeguy.Name == pokemon){
+        tommy_graph(pokeguy);
+        heather_graph(pokeguy);
         stats_panel_heading.append("h2").text(`${pokeguy.Name}`)
         stats_panel.append("h3").text(`Number: #${pokeguy.Number}`);
         stats_panel.append("h3").text(`Type: ${pokeguy.Type_1} \/ ${pokeguy.Type_2}`);
@@ -55,12 +57,3 @@ d3.select("#searchbutton").on("click", function() {
 });
 
 //THIS ONE WORKS
-d3.json("/stats").then((pokemonStats) => {
-  pokemonStats.forEach((monster) => {
-    if (monster.Name == 'Ivysaur'){
-      console.log(monster.Name);
-      console.log(monster.HP);
-      console.log(monster.Attack);
-    }
-  })
-});
