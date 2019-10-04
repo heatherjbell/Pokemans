@@ -1,8 +1,29 @@
 //Create function for making the graph
 function tommy_graph(pokemens){
 
+  
 //START CODING HERE
+  var trace1 = {
+    x: "HP",
+    y: pokemens.HP,
+    type: "bar"
+  };
 
+  var trace2 = {
+    x: "Attack",
+    y: pokemens.Attack,
+    type: "bar"
+  };
+
+  var trace3 = {
+    x: "Defense",
+    y: pokemens.Defense,
+    type: "bar"
+  };
+  
+  var data = [trace1, trace2, trace3];
+
+  Plotly.newPlot("graphone", data, "");
 
 
 
@@ -24,3 +45,5 @@ function tommy_graph(pokemens){
 
 
 };
+
+
