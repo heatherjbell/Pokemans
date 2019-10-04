@@ -2,7 +2,7 @@
     color: #ad0b0be5;  
     font-family: 'Press Start 2P', cursive, 'Times New Roman', Times, serif;
     font-weight: bolder; 
-    padding-top: 25px; 
+    padding-top: 50px; 
 }
 
 header{
@@ -21,3 +21,27 @@ header{
     justify-content: center;
   }
 
+.panel-panel-primary {
+    display: grid;
+    justify-content: center;
+  }
+
+  .panel-heading {
+    display: grid;
+    justify-content: center;
+  }
+
+  .panel-title {
+    display: grid;
+    justify-content: center;
+  }
+
+  #graphone {
+    display: grid;
+    justify-content: left;
+  }
+  
+  #graphtwo {
+    display: grid;
+    justify-content: right;
+  }
