@@ -6,13 +6,18 @@ function tommy_graph(pokemens){
 var data = [
   {
     x: ['HP', 'Attack', 'Defense'],
-    y: ["pokemans"],
-    name: "Pokemon Stats",
+    y: [pokemens.HP, pokemens.Attack, pokemens.Defense],
     type: 'bar'
   }
 ];
 
-Plotly.newPlot('myDiv', data);
+var layout = {
+  height: 250,
+  width: 250,
+  plot_bgcolor: "#ffffff"
+}
+
+Plotly.newPlot('graphone', data, layout);
 
 
 
