@@ -30,7 +30,12 @@ d3.select("#searchbutton").on("click", function() {
         heather_graph(pokeguy);
         stats_panel_heading.append("h2").text(`${pokeguy.Name}`)
         stats_panel.append("h3").text(`Number: #${pokeguy.Number}`);
-        stats_panel.append("h3").text(`Type: ${pokeguy.Type_1} \/ ${pokeguy.Type_2}`);
+        if (pokeguy.Type_2 == null){
+          stats_panel.append("h3").text(`Type: ${pokeguy.Type_1}`);
+        }
+        else {
+          stats_panel.append("h3").text(`Type: ${pokeguy.Type_1} \/ ${pokeguy.Type_2}`);
+        }
         stats_panel.append("h3").text(`Generation: ${pokeguy.Generation}`);
         if (pokeguy.Legendary == true){
           stats_panel.append("h3").text("Legendary: YUP!!!").style("color", "#e0a13a");
