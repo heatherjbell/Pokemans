@@ -1,25 +1,85 @@
 .top-title{
-    color: #ad0b0be5;
-    font-family: 'Press Start 2P', cursive, 'Times New Roman', Times, serif;
-    font-weight: bolder;
-    padding-top: 50px;
+    color: #fbff02e5;
+    font-family: 'Press Start 2P', 'Times New Roman', serif;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: -20px;
 }
 
-header{
-    text-align: center;
-    max-height: 10px;
-    cursor: pointer;
-  }
-
-.logo{
-    text-align: center;
-    max-width: 70%;
+body {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
 }
 
-#graphone {
+.logo {
+  display: block;
+  padding-left: 3%;
+  width: 18%;
+}
 
-  }
+#searchbar {
+  position: relative;
+  height: 40px;
+  width: 500px;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-#graphtwo {
+#searchbutton {
+  position: relative;
+  height: 35px;
+  width: 70px;
+  text-align: center;
+}
 
-  }
+#photobox {
+  width: 250px;
+  height: 250px;
+}
+
+#pokemonimage {
+  width: 250px;
+  height: 250px;
+  justify-content: center;
+}
+
+#pokemonimage2 {
+  width: 250px;
+  height: 250px;
+  justify-content: center;
+}
+
+#stringstats {
+  width: 250px;
+  height: 250px;
+  font-size: 20px;
+  padding-top: 40px;
+  margin-left: 100px;
+
+}
+
+.container2 {
+  display: grid;
+  height: 300px;
+  justify-items: center;
+}
+
+.container3 {
+  display: grid;
+  height: 300px;
+  justify-items: center;
+}
+
+#graphone{
+  margin-bottom: 100px;
+  height: 300px;
+  width: 300px;
+}
+
+#graphtwo{
+  margin-bottom: 100px;
+  height: 300px;
+  width: 300px;
+}

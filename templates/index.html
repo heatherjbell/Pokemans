@@ -20,65 +20,75 @@
     alt="Pokemans">
 </header>
 
-<body>
+<body background="https://backgrounddownload.com/wp-content/uploads/2018/09/pokedex-background-1.jpg" alt="Pokedex">
+
   <div class="top-title">
-    <h1><span><b>My Pokemans: Let Me Show You Them</b></span></h1>
+    <h2><span><b>My Pokemans: <br> Let Me Show You Them!!</b></span></h2>
   </div>
   <div class="container">
     <div class="row">
-
-      <!-- SEARCH BOX AND SUBMIT BUTTON -->
-      <input id="searchbar" type="search" placeholder="GIMME A POKEMANS..." spellcheck="false" autocorrect="off"
-        autocomplete="off"></input>
-      <button class="btn btn-primary" id="searchbutton" type="button" href="/scrape" role="button">Search!!</button>
+      <div class="col-12">
+        <!-- SEARCH BOX AND SUBMIT BUTTON -->
+        <input id="searchbar" type="search" placeholder="Enter Pokemans Name Here!!" spellcheck="false"
+          autocorrect="off" autocomplete="off"></input>
+        <button class="btn btn-primary" id="searchbutton" type="button" href="/scrape" role="button">GO!!</button>
+      </div>
     </div>
     <!-- Photo box -->
-    <div class="row">
-      <div class="col-6">
-        <div id="photobox" class="Photo">
-          <img id="pokemonimage" src="http://pngimg.com/uploads/pokeball/pokeball_PNG21.png"
-            alt="http://pngimg.com/uploads/pokeball/pokeball_PNG21.png" width="400" height="400">
-          </a>
-         <!--  <div class="name"> Pokemans Name: </div> removing this for now since it's not needed -->
-        </div>
-      </div>
-
-      <!-- String Stats -->
-      <div class="col-6">
-        <div id="stringstats" class="panel-panel-primary">
-          <div id="stringpanelheading" class="panel-heading"></div>
-          <div id="statspanel" class="panel-title"></div>
-        </div>
-        </div>
-      </div>
+    <div class="container2">
       <div class="row">
-        <!-- First Graph Box -->
-        <div class="col-5">
+        <div class="col-3">
+          <div id="photobox" class="Photo">
+            <img id="pokemonimage2" src="http://pngimg.com/uploads/pokeball/pokeball_PNG21.png" alt="Pokeball">
+            </a>
+            <!--  <div class="name"> Pokemans Name: </div> removing this for now since it's not needed -->
+          </div>
+        </div>
+
+        <!-- String Stats -->
+        <div class="col-4">
+          <div id="stringstats">
+          <!-- Is there a way to replace empty string stats with this photo? 
+            <img id="pokemonimage2" src="http://www.pngmart.com/files/5/Anime-Pokemon-PNG-Transparent.png" alt="Pikachu"> -->
+            <div id="stringpanelheading" class="panel-heading"></div>
+            <div id="statspanel" class="panel-title"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- First Graph Box -->
+    <div class="container3">
+      <div class="row">
+        <div class="col-3">
           <div id="graphone" class="graph-container">
             Graph 1 Placeholder
           </div>
         </div>
-        <div class="col-2"></div>
         <!-- Second Graph Box -->
-        <div class="col-5">
+        <div class="col-4">
           <div id="graphtwo" class="graph-container">
             Graph 2 Placeholder
           </div>
         </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="{{ url_for('static', filename='js/mongo_pics_and_stats.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/tommy_graph.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/heather_graph.js') }}"></script>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="{{ url_for('static', filename='js/mongo_pics_and_stats.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/tommy_graph.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/heather_graph.js') }}"></script>
 </body>

@@ -40,8 +40,8 @@ else{
   };
 
   var layout = {
-    height: 800,
-    width: 800,
+    height: 250,
+    width: 250,
     plot_bgcolor: "#ffffff"
   }
 
