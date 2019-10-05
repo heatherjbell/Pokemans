@@ -46,4 +46,6 @@ header{
   #graphtwo {
     display: grid;
     justify-content: right;
+    width: 50%;
+    height: 500px;
   }
