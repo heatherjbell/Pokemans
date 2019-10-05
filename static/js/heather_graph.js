@@ -41,8 +41,9 @@ else{
 
   var layout = {
     height: 250,
-    width: 250,
-    plot_bgcolor: "#ffffff"
+    width: 275,
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)'
   }
 
 

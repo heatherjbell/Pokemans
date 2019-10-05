@@ -56,7 +56,7 @@ body {
   height: 250px;
   font-size: 20px;
   padding-top: 40px;
-  margin-left: 100px;
+  margin-left: 150px;
 
 }
 
@@ -70,6 +70,7 @@ body {
   display: grid;
   height: 300px;
   justify-items: center;
+  margin-left: 150px;
 }
 
 #graphone{
