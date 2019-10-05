@@ -3,6 +3,16 @@ function tommy_graph(pokemens){
   
 //START CODING HERE
 
+var data = [
+  {
+    x: ['HP', 'Attack', 'Defense'],
+    y: ["pokemans"],
+    name: "Pokemon Stats",
+    type: 'bar'
+  }
+];
+
+Plotly.newPlot('myDiv', data);
 
 
 
