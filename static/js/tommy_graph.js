@@ -12,8 +12,8 @@ var data = [
 ];
 
 var layout = {
-  height: 250,
-  width: 275,
+  height: 300,
+  width: 350,
   paper_bgcolor: 'rgba(0,0,0,0)',
   plot_bgcolor: 'rgba(0,0,0,0)'
 }
