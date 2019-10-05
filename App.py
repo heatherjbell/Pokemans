@@ -4,12 +4,12 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func, inspect
 from flask import Flask, jsonify, render_template, redirect
 from flask_pymongo import PyMongo
-from config import mongo_password, mongo_username
+from config import mongo_password, mongo_username, sql_username, sql_password
 from bson.json_util import dumps
 
 
 # Database Setup
-rds_connection_string = f"postgres:postgres@localhost:5432/Pokemon"
+rds_connection_string = f"{sql_username}:{sql_password}@localhost:5432/Pokemon"
 engine = create_engine(f'postgresql://{rds_connection_string}')
 
 # Reflect existing database
