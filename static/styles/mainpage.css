@@ -16,44 +16,10 @@ header{
     max-width: 70%;
 }
 
-.graph-container {
-    display: grid;
-    justify-content: center;
-  }
-
-.panel-panel-primary {
-  display: grid;
-  justify-content: center;
-  }
-
-.panel-heading {
-  display: grid;
-  justify-content: center;
-  }
-
-.panel-title {
-  display: grid;
-  justify-content: center;
-  }
-
 #graphone {
-  display: grid;
-  justify-content: left;
-  width: 50%;
-  height: 500px;
+
   }
 
-<<<<<<< HEAD
 #graphtwo {
-  display: grid;
-  justify-content: right;
-  height: 400;
-  width: 400;
-=======
-  #graphtwo {
-    display: grid;
-    justify-content: right;
-    width: 50%;
-    height: 500px;
->>>>>>> 3d6d19ac36bec7829fea01858b362b5b1ec9e2db
+
   }
