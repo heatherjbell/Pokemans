@@ -62,3 +62,6 @@ d3.select("#searchbutton").on("click", function() {
 });
 
 //THIS ONE WORKS
+
+//AUTOCOMPLETE STEPS https://www.w3schools.com/howto/howto_js_autocomplete.asp
+//VAR NEEDS TO BE CREATED OF ALL POKEMON NAMES (I WILL ATTEMPT THIS - HEATHER)

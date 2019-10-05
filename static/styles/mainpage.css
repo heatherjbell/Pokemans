@@ -84,3 +84,9 @@ body {
   width: 300px;
   margin-left: 100px;
 }
+
+.footer {
+  width: 100%;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
