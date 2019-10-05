@@ -33,7 +33,7 @@ d3.select("#searchbutton").on("click", function() {
         stats_panel.append("h3").text(`Type: ${pokeguy.Type_1} \/ ${pokeguy.Type_2}`);
         stats_panel.append("h3").text(`Generation: ${pokeguy.Generation}`);
         if (pokeguy.Legendary == true){
-          stats_panel.append("h3").text("Legendary: YOU'RE GODDAMN RIGHT HE IS").style("color", "#e0a13a");
+          stats_panel.append("h3").text("Legendary: YUP!!!").style("color", "#e0a13a");
         }
         else{
           stats_panel.append("h3").text("Legendary: No, he's lame");
