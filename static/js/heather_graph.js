@@ -5,8 +5,17 @@ function heather_graph(pokegirl){
   var trace1 = {
     x: ["Special Attack", "Special Defense", "Speed"],
     y: [pokegirl.Special_Attack, pokegirl.Special_Defense, pokegirl.Speed],
-    type: "bar"
+    type: "bar",
+    marker: {
+      color: ['#c91e5d', '#24bdab', "#8822bf"]
+    }
   };
+
+  var layout = {
+    height: 800,
+    width: 800,
+    plot_bgcolor: "#ffffff"
+  }
 
 
 
@@ -19,7 +28,7 @@ function heather_graph(pokegirl){
   var data = [trace1]
 
   //Create bar chart for the data
-  Plotly.newPlot("graphtwo", data, "");
+  Plotly.newPlot("graphtwo", data, layout);
 
   //
 

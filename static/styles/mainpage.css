@@ -22,28 +22,30 @@ header{
   }
 
 .panel-panel-primary {
-    display: grid;
-    justify-content: center;
+  display: grid;
+  justify-content: center;
   }
 
-  .panel-heading {
-    display: grid;
-    justify-content: center;
+.panel-heading {
+  display: grid;
+  justify-content: center;
   }
 
-  .panel-title {
-    display: grid;
-    justify-content: center;
+.panel-title {
+  display: grid;
+  justify-content: center;
   }
 
-  #graphone {
-    display: grid;
-    justify-content: left;
-    width: 50%;
-    height: 500px;
+#graphone {
+  display: grid;
+  justify-content: left;
+  width: 50%;
+  height: 500px;
   }
 
-  #graphtwo {
-    display: grid;
-    justify-content: right;
+#graphtwo {
+  display: grid;
+  justify-content: right;
+  height: 400;
+  width: 400;
   }
