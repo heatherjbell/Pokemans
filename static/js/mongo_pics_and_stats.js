@@ -65,3 +65,7 @@ d3.select("#searchbutton").on("click", function() {
 
 //AUTOCOMPLETE STEPS https://www.w3schools.com/howto/howto_js_autocomplete.asp
 //VAR NEEDS TO BE CREATED OF ALL POKEMON NAMES (I WILL ATTEMPT THIS - HEATHER)
+
+
+//TRIGGER BUTTON ON ENTER https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+//USING ENTER AFTER TYPING IN SEARCH BAR
