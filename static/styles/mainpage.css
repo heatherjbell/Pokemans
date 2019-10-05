@@ -43,9 +43,17 @@ header{
   height: 500px;
   }
 
+<<<<<<< HEAD
 #graphtwo {
   display: grid;
   justify-content: right;
   height: 400;
   width: 400;
+=======
+  #graphtwo {
+    display: grid;
+    justify-content: right;
+    width: 50%;
+    height: 500px;
+>>>>>>> 3d6d19ac36bec7829fea01858b362b5b1ec9e2db
   }
