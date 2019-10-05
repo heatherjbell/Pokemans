@@ -14,7 +14,7 @@ else if (pokegirl.Type_1 == "Ghost"){
   var color = "#773fd9"
 }
 else if (pokegirl.Type_1 == "Fire"){
-  var color = "#de3121"
+  var color = "#4B0D00"
 }
 else if (pokegirl.Type_1 == "Bug"){
   var color = "#bde831"
