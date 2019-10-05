@@ -43,7 +43,12 @@ else{
     height: 300,
     width: 350,
     paper_bgcolor: 'rgba(0,0,0,0)',
-    plot_bgcolor: 'rgba(0,0,0,0)'
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    font: {
+      family: 'Times New Roman, Courier New, monospace',
+      size: 16,
+      color: '#000000'
+    }
   }
 
 
