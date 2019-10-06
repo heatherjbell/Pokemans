@@ -37,6 +37,7 @@ body {
 #photobox {
   width: 250px;
   height: 250px;
+  padding-top: 10px;
 }
 
 #pokemonimage {
