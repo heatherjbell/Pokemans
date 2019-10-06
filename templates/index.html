@@ -12,6 +12,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="static/styles/mainpage.css">
   <script src="https://d3js.org/d3.v5.min.js"></script>
+
 </head>
 
 <header>
@@ -28,13 +29,23 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <!-- SEARCH BOX AND SUBMIT BUTTON -->
+
+        <!--AUTOCOMPLETE ATTEMPT-->
+        <form autocomplete="off">
+          <div class="autocomplete">
+            <input id="myInput" type="search" placeholder="Enter Pokemans Name Here!!" spellcheck="false"
+              autocorrect="off" autocomplete="off">
+          </div>
+          <button class="btn btn-primary" id="searchbutton" type="button" href="/scrape" role="button">GO!!</button>
+        </form>
+        <!-- SEARCH BOX AND SUBMIT BUTTON (before autocomplete, no longer needed)
         <input id="searchbar" type="search" placeholder="Enter Pokemans Name Here!!" spellcheck="false"
           autocorrect="off" autocomplete="off"></input>
-        <button class="btn btn-primary" id="searchbutton" type="button" href="/scrape" role="button">GO!!</button>
+        <button class="btn btn-primary" id="searchbutton" type="button" href="/scrape" role="button">GO!!</button> -->
       </div>
     </div>
   </div>
+
   <!-- Photo box -->
   <div class="container2">
     <div class="row">
@@ -90,6 +101,9 @@
   <script src="{{ url_for('static', filename='js/mongo_pics_and_stats.js') }}"></script>
   <script src="{{ url_for('static', filename='js/tommy_graph.js') }}"></script>
   <script src="{{ url_for('static', filename='js/heather_graph.js') }}"></script>
+  <script>
+    autocomplete(document.getElementById("myInput"), pokemon_list);
+  </script>
 </body>
 
 <!-- Insert Footer Here -->
