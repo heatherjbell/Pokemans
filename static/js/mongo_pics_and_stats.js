@@ -5,6 +5,7 @@ var stats_panel_heading = d3.select("#stringpanelheading");
 var stats_panel = d3.select("#statspanel");
 var picture = d3.select("#photobox");
 
+//Setting up the search button
 d3.select("#searchbutton").on("click", function () {
   var pokemon = d3.select("#myInput").property("value");
   d3.select("#statspanel").html("");
@@ -13,8 +14,12 @@ d3.select("#searchbutton").on("click", function () {
   d3.json("/stats").then(result => {
     result.forEach(pokeguy => {
       if (pokeguy.Name == pokemon) {
+
+        //Insert the graphs
         tommy_graph(pokeguy);
         heather_graph(pokeguy);
+
+        //Putting the Pokemon information in text
         stats_panel_heading.append("h2").text(`${pokeguy.Name}`)
         stats_panel.append("h5").text(`Number: #${pokeguy.Number}`);
         if (pokeguy.Type_2 == null) {
@@ -31,6 +36,8 @@ d3.select("#searchbutton").on("click", function () {
       };
     });
   });
+
+  //Add the Pokemon image
   d3.json("/images").then(result => {
     result.forEach(pokeguy => {
       if (pokeguy.name == pokemon) {
@@ -851,6 +858,8 @@ var pokemon_list = ["Bulbasaur",
   "Volcanion"
 ]
 
+
+//Setting up the autocomplete
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
@@ -955,9 +964,8 @@ function autocomplete(inp, arr) {
 
 
 
-//TRIGGER BUTTON ON ENTER https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
-//USING ENTER AFTER TYPING IN SEARCH BAR
 
+//USING ENTER AFTER TYPING IN SEARCH BAR
 // Get the input field
 var input = document.getElementById("myInput");
 

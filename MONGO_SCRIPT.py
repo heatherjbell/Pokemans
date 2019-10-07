@@ -12,15 +12,19 @@ from flask_pymongo import PyMongo
 from config import mongo_password, mongo_username
 from selenium import webdriver
 
+#Read the csv
 app = Flask(__name__)
 csv = pd.read_csv('Pokemon.csv')
 
+#Configure the mongo DB database
 app.config['MONGO_URI'] = f'mongodb+srv://MikeAnderson89:{mongo_password}@cluster0-wadjd.mongodb.net/test?retryWrites=true&w=majority'
 mongo = PyMongo(app)
 
+#Set up the webscrape
 def scrape(pokemon):
     url = f'https://bulbapedia.bulbagarden.net/wiki/{pokemon}_(Pok%C3%A9mon)'
     driver = webdriver.Chrome()
+
     #Open browser
     browser = Browser('chrome')
     browser.visit(url)
@@ -45,9 +49,10 @@ def scrape(pokemon):
 
     return pokemon_image
 
-big_ol_pokemon_list = csv['Name']
+    big_ol_pokemon_list = csv['Name']
+
 #Run through every pokemon name and get the picture
-for pokedude in big_ol_pokemon_list[170:]:
+for pokedude in big_ol_pokemon_list[]:
     try:
         pokemon_db = mongo.db.pokemon
         pokemon_data = scrape(pokedude)

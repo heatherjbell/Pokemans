@@ -84,6 +84,7 @@ def stats():
 #    else:
 #        return jsonify("No such Pokemon")
 
+#Mongo DB image database
 @app.route("/images")
 def images():
     pokemon_image_db = mongo.db.pokemon.find()
