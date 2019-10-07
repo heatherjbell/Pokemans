@@ -17,3 +17,6 @@ The background and item placement was configured using HTML and CSS.  Very littl
 JavaScript was used to parse through the JSONs from the SQL and MongoDB databases and return the information for the Pokemon that was typed into the search bar.  The autocomplete function helps to choose the correct Pokemon spelling and capitalization.
 
 The graphs were created using Plotly.js and were configured within JavaScript based on the stats returned by the JSONs.
+
+## USE
+Run the Flask app by typing in "python App.py" into Bash or Command Prompt and going to the local url listed.  Then, simply search for the Pokemon of your choice.
