@@ -1,18 +1,5 @@
 var pokemon = d3.select("#myInput");
 
-function scrape_for_stats() {
-  var pokemon = d3.select("#myInput").value;
-  d3.json("/stats").then((pokemonStats) => {
-    pokemonStats.forEach((monster) => {
-      if (monster.Name == pokemon) {
-        console.log(monster.Name);
-        console.log(monster.HP);
-        console.log(monster.Attack);
-      };
-    });
-  });
-};
-
 var poke_name = d3.select(".name");
 var stats_panel_heading = d3.select("#stringpanelheading");
 var stats_panel = d3.select("#statspanel");
