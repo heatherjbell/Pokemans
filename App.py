@@ -57,33 +57,6 @@ def stats():
     return jsonify(pokemon_list)
     session.close()
 
-#Pokemon By Name
-#@app.route("/by_name/<name>")
-#def by_name(name):
-#    session = Session(engine)
-#    results = session.query(pokemon.name,
-#                            pokemon.number,
-#                            pokemon.type_1,
-#                            pokemon.type_2,
-#                            pokemon.hp,
-#                            pokemon.attack,
-#                            pokemon.defense,
-#                            pokemon.sp_atk,
-#                            pokemon.sp_def,
-#                            pokemon.speed,
-#                            pokemon.generation,
-#                            pokemon.legendary
-#                            .filter(securities.name == name).all()
-#    if results:
-#        for result in results:
-#            if result:
-#                return jsonify(result)
-#            else:
-#                return jsonify("No such Pokemon")
-#        session.close()
-#    else:
-#        return jsonify("No such Pokemon")
-
 #Mongo DB image database
 @app.route("/images")
 def images():

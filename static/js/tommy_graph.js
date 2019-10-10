@@ -15,7 +15,7 @@ function tommy_graph(pokemens){
     var color = "#773fd9"
   }
   else if (pokemens.Type_1 == "Fire"){
-    var color = "#4B0D00"
+    var color = "#ff7d59"
   }
   else if (pokemens.Type_1 == "Bug"){
     var color = "#bde831"
