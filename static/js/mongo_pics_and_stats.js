@@ -20,18 +20,18 @@ d3.select("#searchbutton").on("click", function () {
         heather_graph(pokeguy);
 
         //Putting the Pokemon information in text
-        stats_panel_heading.append("h2").text(`${pokeguy.Name}`)
-        stats_panel.append("h5").text(`Number: #${pokeguy.Number}`);
+        stats_panel_heading.append("h1").text(`${pokeguy.Name}`)
+        stats_panel.append("h6").text(`Number: #${pokeguy.Number}`);
         if (pokeguy.Type_2 == null) {
-          stats_panel.append("h5").text(`Type: ${pokeguy.Type_1}`);
+          stats_panel.append("h6").text(`Type: ${pokeguy.Type_1}`);
         } else {
-          stats_panel.append("h5").text(`Type: ${pokeguy.Type_1} \/ ${pokeguy.Type_2}`);
+          stats_panel.append("h6").text(`Type: ${pokeguy.Type_1} \/ ${pokeguy.Type_2}`);
         }
-        stats_panel.append("h5").text(`Generation: ${pokeguy.Generation}`);
+        stats_panel.append("h6").text(`Generation: ${pokeguy.Generation}`);
         if (pokeguy.Legendary == true) {
-          stats_panel.append("h5").text("Legendary: YUP!!!").style("color", "#e0a13a");
+          stats_panel.append("h6").text("Legendary: YUP!!!").style("color", "#e0a13a");
         } else {
-          stats_panel.append("h5").text("Legendary: No, he's lame");
+          stats_panel.append("h6").text("Legendary: No, he's lame");
         }
       };
     });

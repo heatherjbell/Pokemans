@@ -9,6 +9,7 @@
 
 #stringstats {
   color: white;
+  font-family: 'Pokemon Font';
 }
 
 body {
@@ -17,6 +18,9 @@ body {
   text-align: center;
 }
 
+h1 {
+  font-family: 'Pokemon Hollow Font';
+}
 .logo {
   display: block;
   padding-left: 3%;
@@ -60,7 +64,7 @@ body {
 #stringstats {
   width: 250px;
   height: 250px;
-  font-size: 20px;
+  font-size: 12px;
   padding-top: 40px;
   margin-left: 150px;
 
@@ -166,4 +170,18 @@ input[type=text] {
   display: inline-block;
   text-align: center;
   width: 500px;
+}
+
+@font-face {
+  font-family: 'Pokemon Font';
+  font-style: normal;
+  font-weight: 300;
+  src: url(pokemon_font.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Pokemon Hollow Font';
+  font-style: normal;
+  font-weight: 300;
+  src: url(pokemon_hollow.ttf) format('truetype');
 }

@@ -49,8 +49,8 @@ function tommy_graph(pokemens){
     paper_bgcolor: 'rgba(0,0,0,0)',
     plot_bgcolor: 'rgba(0,0,0,0)',
     font: {
-      family: 'Times New Roman, Courier New, monospace',
-      size: 16,
+      family: 'Pokemon Font',
+      size: 9,
       color: '#ffffff'
     },
     yaxis: {
